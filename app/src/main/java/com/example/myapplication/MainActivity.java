@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.toolbox.NetworkImageView;
+import com.example.myapplication.network.ImageRequester;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -21,11 +24,19 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private EditText txtData;
+    private ImageRequester imageRequester;
+    private NetworkImageView myImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         txtData=findViewById(R.id.txtData);
+        String url = "https://ph0.qna.center/storage/photos/marina/1795532.jpg";
+        //url="http://10.0.2.2:5000/upload/1.jpg";
+
+        imageRequester = ImageRequester.getInstance();
+        myImage = findViewById(R.id.myimg);
+        imageRequester.setImageFromUrl(myImage, url);
 
     }
 
