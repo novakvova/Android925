@@ -36,6 +36,8 @@
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
+
     <Button
         android:id="@+id/button2"
         android:layout_width="144dp"
@@ -45,6 +47,16 @@
         android:onClick="onClickRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLayout" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="271dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailLayout" />
 
