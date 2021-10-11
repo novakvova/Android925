@@ -7,4 +7,7 @@
     <item android:id="@+id/mhome"
         android:title="Головна"
         app:showAsAction="never" />
+    <item android:id="@+id/mproduct"
+        android:title="Продукти"
+        app:showAsAction="never" />
 </menu>
