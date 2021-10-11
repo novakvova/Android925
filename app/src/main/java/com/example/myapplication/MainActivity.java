@@ -10,9 +10,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
+import com.bumptech.glide.Glide;
 import com.example.myapplication.network.ImageRequester;
 
 import java.util.List;
@@ -24,8 +26,9 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private EditText txtData;
-    private ImageRequester imageRequester;
-    private NetworkImageView myImage;
+    //private ImageRequester imageRequester;
+    //private NetworkImageView myImage;
+    private ImageView myImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +37,15 @@ public class MainActivity extends AppCompatActivity {
         String url = "https://ph0.qna.center/storage/photos/marina/1795532.jpg";
         //url="http://10.0.2.2:5000/upload/1.jpg";
 
-        imageRequester = ImageRequester.getInstance();
+        //imageRequester = ImageRequester.getInstance();
+        //myImage = findViewById(R.id.myimg);
+        //imageRequester.setImageFromUrl(myImage, url);
+
         myImage = findViewById(R.id.myimg);
-        imageRequester.setImageFromUrl(myImage, url);
+        Glide.with(this)
+                .load(url)
+                .centerCrop()
+                .into(myImage);
 
     }
 
