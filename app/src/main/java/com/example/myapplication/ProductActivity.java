@@ -27,12 +27,11 @@ public class ProductActivity extends AppCompatActivity {
                 LinearLayoutManager.VERTICAL, false));
 
         List<ProductDTO> list = new ArrayList<>();
-        list.add(new ProductDTO("Сало",200,"https://www.gastronom.ru/binfiles/images/20150626/bc2762c5.jpg"));
-        list.add(new ProductDTO("Морква",10,"https://fruit-time.ua/images/cache/products/04/morkva-mita-500x500.jpeg"));
-        list.add(new ProductDTO("Сало",200,"https://www.gastronom.ru/binfiles/images/20150626/bc2762c5.jpg"));
-        list.add(new ProductDTO("Морква",10,"https://fruit-time.ua/images/cache/products/04/morkva-mita-500x500.jpeg"));
-        list.add(new ProductDTO("Сало",200,"https://www.gastronom.ru/binfiles/images/20150626/bc2762c5.jpg"));
-        list.add(new ProductDTO("Морква",10,"https://fruit-time.ua/images/cache/products/04/morkva-mita-500x500.jpeg"));
+        list.add(new ProductDTO("Сало",200,"http://10.0.2.2:5000/images/2.jpg"));
+        list.add(new ProductDTO("Морква",10,"http://10.0.2.2:5000/images/1.jpg"));
+        list.add(new ProductDTO("Самогон",70,"http://10.0.2.2:5000/images/3.jpg"));
+        list.add(new ProductDTO("Цибуля",5,"http://10.0.2.2:5000/images/4.jpg"));
+        list.add(new ProductDTO("Зелені ощипки",20,"http://10.0.2.2:5000/images/5.jpg"));
 
         adapter = new ProductAdapter(list);
         recyclerView.setAdapter(adapter);

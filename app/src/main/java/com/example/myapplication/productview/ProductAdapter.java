@@ -42,7 +42,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductCardViewHolder> 
             String url = model.getImage()+"?data="+i;
             Glide.with(HomeApplication.getAppContext())
                     .load(url)
-                    .circleCrop()
+                    //.circleCrop()
                     .apply(new RequestOptions().override(300, 300))
                     .into(holder.prodImage);
         }
